@@ -172,7 +172,9 @@
 <body class="bg-light">
     <main class="container my-5 py-5">
 
+        <!-- Hero Section -->
         <section id="hero" class="bg-dark text-white p-5 p-md-5 rounded-4 shadow-lg mb-5 position-relative overflow-hidden">
+            <!-- Background Image Overlay -->
             <div class="position-absolute top-0 start-0 w-100 h-100 opacity-25" style="background-image: url('https://placehold.co/1200x600/343a40/ffffff?text=AI+Dev+Background'); background-size: cover; background-position: center; filter: grayscale(50%);"></div>
 
             <div class="row align-items-center justify-content-between text-center text-md-start position-relative z-1">
@@ -202,11 +204,13 @@
                     </div>
                 </div>
                 <div class="col-md-4 mt-4 mt-md-0 d-flex justify-content-center animate-fade-in-scale delay-4">
+                    <!-- Placeholder for a professional profile image -->
                     <img src="https://placehold.co/280x280/6f42c1/ffffff?text=Noman" alt="Muhammad Noman Profile" class="img-fluid rounded-circle border border-5 border-light shadow-lg" style="object-fit: cover;">
                 </div>
             </div>
         </section>
 
+        <!-- About Me Section -->
         <section id="about" class="custom-card fade-in-section">
             <h2 class="section-heading font-poppins">About Me</h2>
             <p class="fs-5 mb-4 text-secondary">
@@ -217,6 +221,7 @@
             </p>
         </section>
 
+        <!-- Skills Section -->
         <section id="skills" class="custom-card fade-in-section">
             <h2 class="section-heading font-poppins">Skills</h2>
             <div class="row g-5">
@@ -361,6 +366,7 @@
             </div>
         </section>
 
+        <!-- Experience Section -->
         <section id="experience" class="custom-card fade-in-section">
             <h2 class="section-heading font-poppins">Experience</h2>
 
@@ -426,30 +432,78 @@
             </div>
         </section>
 
+        <!-- Projects Section -->
         <section id="projects" class="custom-card fade-in-section">
             <h2 class="section-heading font-poppins">Projects</h2>
-            <p class="fs-5 mb-4 text-secondary">
-                This section is dedicated to showcasing your personal projects, open-source contributions, or significant work outside of your primary employment. Highlighting these projects can demonstrate your initiative, passion, and specific technical skills in action.
-            </p>
-            <p class="fs-5 mb-4 text-secondary">
-                Consider adding:
-            </p>
-            <ul class="list-unstyled text-secondary mb-5">
-                <li><i class="bi bi-arrow-right-circle-fill text-primary me-2"></i>Links to live demos or GitHub repositories.</li>
-                <li><i class="bi bi-arrow-right-circle-fill text-primary me-2"></i>Brief descriptions of each project, including the technologies used and your role.</li>
-                <li><i class="bi bi-arrow-right-circle-fill text-primary me-2"></i>Screenshots or short videos of the project in action.</li>
-                <li><i class="bi bi-arrow-right-circle-fill text-primary me-2"></i>The problems each project solved or the impact it had.</li>
-            </ul>
-            <div class="text-center">
-                <a href="#" class="btn btn-custom-primary">
-                    <svg class="me-2" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M8 0a.5.5 0 0 1 .5.5v7.5H15a.5.5 0 0 1 0 1h-6.5V15a.5.5 0 0 1-1 0v-6.5H1a.5.5 0 0 1 0-1h6.5V.5A.5.5 0 0 1 8 0z"/>
-                    </svg>
-                    Add Your Projects Here!
-                </a>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="experience-item">
+                        <h3 class="h4 fw-bold text-primary font-poppins">AI-Powered ERP Modernization</h3>
+                        <p class="lead mb-2 text-secondary">Leveraging OpenAI & ML.NET</p>
+                        <ul class="list-unstyled text-secondary">
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Integrated OpenAI APIs and ML.NET to infuse AI capabilities into legacy ERP systems.</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Migrated existing modules to a .NET Core microservices architecture, significantly boosting performance and scalability.</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Developed intelligent automation features, streamlining complex business processes.</li>
+                            <li><i class="bi bi-tools text-info me-2"></i>**Tech Stack:** C#.NET, .NET Core, OpenAI APIs, ML.NET, Microservices, Docker, Azure DevOps</li>
+                        </ul>
+                        <div class="d-flex gap-2 mt-3">
+                            <a href="#" class="btn btn-sm btn-outline-primary">View Demo</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">GitHub Repo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="experience-item">
+                        <h3 class="h4 fw-bold text-primary font-poppins">Real-time Clinical Data Pipeline</h3>
+                        <p class="lead mb-2 text-secondary">EHR Interoperability Solution</p>
+                        <ul class="list-unstyled text-secondary">
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Architected and implemented real-time data pipelines for seamless EHR interoperability.</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Developed high-performance RESTful APIs using ASP.NET Core and gRPC for healthcare data exchange.</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Ensured compliance with healthcare standards like FHIR/HL7/DICOM.</li>
+                            <li><i class="bi bi-tools text-info me-2"></i>**Tech Stack:** ASP.NET Core, gRPC, Azure AI Services, Microservices, FHIR, HL7, DICOM</li>
+                        </ul>
+                        <div class="d-flex gap-2 mt-3">
+                            <a href="#" class="btn btn-sm btn-outline-primary">View Demo</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">GitHub Repo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="experience-item">
+                        <h3 class="h4 fw-bold text-primary font-poppins">Cross-Platform Mobile App (React Native)</h3>
+                        <p class="lead mb-2 text-secondary">Enhanced User Experience</p>
+                        <ul class="list-unstyled text-secondary">
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Migrated a native mobile application to React Native for broader platform reach.</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Integrated Google Watch/Apple Watch APIs to extend functionality to wearables.</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Significantly enhanced UI/UX with modern design principles and TypeScript.</li>
+                            <li><i class="bi bi-tools text-info me-2"></i>**Tech Stack:** React Native, TypeScript, Blazor, Google Watch API, Apple Watch API</li>
+                        </ul>
+                        <div class="d-flex gap-2 mt-3">
+                            <a href="#" class="btn btn-sm btn-outline-primary">View Demo</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">GitHub Repo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="experience-item">
+                        <h3 class="h4 fw-bold text-primary font-poppins">Secure Fintech Payment Gateway</h3>
+                        <p class="lead mb-2 text-secondary">Reduced Payment Errors by 20%</p>
+                        <ul class="list-unstyled text-secondary">
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Led initiatives to integrate EFT, credit, and debit card payment systems.</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Implemented robust security measures, including OAuth 2.0 and JWT Tokens.</li>
+                            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Achieved a 20% reduction in payment errors through optimized processing flows.</li>
+                            <li><i class="bi bi-tools text-info me-2"></i>**Tech Stack:** ASP.NET Core, Web API, OAuth 2.0, JWT, SQL Server, RabbitMQ</li>
+                        </ul>
+                        <div class="d-flex gap-2 mt-3">
+                            <a href="#" class="btn btn-sm btn-outline-primary">View Demo</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">GitHub Repo</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
+        <!-- Education & Certifications Section -->
         <section id="education" class="custom-card fade-in-section">
             <h2 class="section-heading font-poppins">Education & Certifications</h2>
             <div class="mb-5">
@@ -487,6 +541,7 @@
             </div>
         </section>
 
+        <!-- Contact Section -->
         <section id="contact" class="custom-card fade-in-section">
             <h2 class="section-heading font-poppins">Get In Touch</h2>
             <p class="fs-5 mb-5 text-center text-md-start text-secondary">
@@ -541,12 +596,15 @@
             </div>
         </section>
 
+        <!-- Footer -->
         <footer class="text-center text-muted py-4 mt-5 border-top bg-white rounded-3 shadow-sm">
             &copy; <span id="current-year"></span> Muhammad Noman. All rights reserved.
         </footer>
     </main>
 
+    <!-- Bootstrap JS CDN (Bundle with Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Bootstrap Icons CDN (Optional, but used for checkmark/arrow icons) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <script>
