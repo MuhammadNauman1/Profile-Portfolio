@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Noman - Senior Software Engineer Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa; /* Light gray background */
+            color: #343a40; /* Darker text for better contrast */
+            line-height: 1.7;
+        }
+        h1, h2, h3, .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Custom Section Heading Styling */
+        .section-heading {
+            font-size: 2.8rem; /* Larger heading */
+            font-weight: 700; /* Extra bold */
+            color: #212529; /* Darker color */
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 80px; /* Shorter underline */
+            height: 5px;
+            background: linear-gradient(to right, #007bff, #6f42c1); /* Blue to purple gradient */
+            border-radius: 5px;
+        }
+
+        /* Custom Card Styling */
+        .custom-card {
+            background-color: #ffffff;
+            padding: 2.5rem;
+            border-radius: 1.5rem; /* More rounded corners */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Softer, larger shadow */
+            transition: all 0.4s ease-in-out;
+            border: none; /* Remove default Bootstrap border */
+        }
+        .custom-card:hover {
+            transform: translateY(-8px); /* More pronounced lift effect */
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Skill Item Styling */
+        .skill-item {
+            background: linear-gradient(45deg, #007bff, #6f42c1); /* Blue to purple gradient */
+            color: #ffffff;
+            padding: 0.6rem 1.2rem;
+            border-radius: 2rem; /* Pill shape */
+            font-size: 0.95rem;
+            font-weight: 500;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+            transition: all 0.3s ease;
+            display: inline-flex; /* For consistent padding */
+            align-items: center;
+            justify-content: center;
+        }
+        .skill-item:hover {
+            transform: scale(1.08);
+            box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+        }
+
+        /* Experience Item Styling */
+        .experience-item {
+            background-color: #fefefe;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            border-left: 5px solid #007bff; /* Accent border */
+            transition: all 0.3s ease;
+        }
+        .experience-item:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            border-left-color: #6f42c1; /* Change accent color on hover */
+        }
+
+        /* Button Styling */
+        .btn-custom-primary {
+            background: linear-gradient(to right, #007bff, #6f42c1);
+            border: none;
+            color: white;
+            padding: 0.9rem 2.2rem;
+            border-radius: 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-custom-primary:hover {
+            background: linear-gradient(to right, #6f42c1, #007bff); /* Reverse gradient on hover */
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(0, 123, 255, 0.4);
+        }
+
+        .btn-custom-secondary {
+            background-color: #ffffff;
+            border: 2px solid #007bff;
+            color: #007bff;
+            padding: 0.9rem 2.2rem;
+            border-radius: 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            box-shadow: 0 8px 20px rgba(0, 123, 255, 0.1);
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-custom-secondary:hover {
+            background-color: #e9f5ff;
+            border-color: #6f42c1;
+            color: #6f42c1;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(0, 123, 255, 0.2);
+        }
+
+        /* Contact Form Input Styling */
+        .form-control-custom {
+            border-radius: 0.75rem;
+            padding: 1rem 1.25rem;
+            border: 1px solid #ced4da;
+            transition: all 0.3s ease;
+        }
+        .form-control-custom:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+            outline: none;
+        }
+
+        /* Animations */
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .animate-fade-in-scale {
+            animation: fadeInScale 0.8s ease-out forwards;
+        }
+
+        /* Delay for hero section elements */
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+
+        /* Intersection Observer for fade-in animations */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <main class="container my-5 py-5">
+
+        <section id="hero" class="bg-dark text-white p-5 p-md-5 rounded-4 shadow-lg mb-5 position-relative overflow-hidden">
+            <div class="position-absolute top-0 start-0 w-100 h-100 opacity-25" style="background-image: url('https://placehold.co/1200x600/343a40/ffffff?text=AI+Dev+Background'); background-size: cover; background-position: center; filter: grayscale(50%);"></div>
+
+            <div class="row align-items-center justify-content-between text-center text-md-start position-relative z-1">
+                <div class="col-md-8 animate-fade-in-scale">
+                    <h1 class="display-3 fw-bold mb-3 font-poppins delay-1">
+                        Muhammad Noman
+                    </h1>
+                    <p class="lead mb-4 text-primary-subtle delay-2">
+                        Senior Software Engineer | Full Stack Developer | AI Enthusiast
+                    </p>
+                    <p class="fs-5 mb-5 opacity-75 delay-3">
+                        Accomplished Senior Software Engineer with over 9 years of proven track record in Web3, Fintech, E-commerce, and Healthcare. Proficient in full-stack development, leveraging cutting-edge technologies to deliver superior-quality solutions.
+                    </p>
+                    <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start gap-3 delay-4">
+                        <a href="mailto:fullstackdev.noman@gmail.com" class="btn btn-custom-secondary">
+                            <svg class="me-2" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.756Zm7.318 1.109L16 4.697v7.104l-5.803-3.558Z"/>
+                            </svg>
+                            Email Me
+                        </a>
+                        <a href="#contact" class="btn btn-custom-primary">
+                            <svg class="me-2" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                            </svg>
+                            Let's Connect
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4 mt-md-0 d-flex justify-content-center animate-fade-in-scale delay-4">
+                    <img src="https://placehold.co/280x280/6f42c1/ffffff?text=Noman" alt="Muhammad Noman Profile" class="img-fluid rounded-circle border border-5 border-light shadow-lg" style="object-fit: cover;">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="custom-card fade-in-section">
+            <h2 class="section-heading font-poppins">About Me</h2>
+            <p class="fs-5 mb-4 text-secondary">
+                With over 9 years of experience, I am a dedicated Senior Software Engineer and Full Stack Developer passionate about crafting robust, scalable, and innovative solutions across diverse industries including Web3, Fintech, E-commerce, and Healthcare. My expertise spans front-end development with Angular, React, and React Native, coupled with strong backend capabilities in C#.NET, .NET Core, and Node.js.
+            </p>
+            <p class="fs-5 text-secondary">
+                I thrive in collaborative environments, consistently delivering high-quality software while integrating cutting-edge technologies like AI/ML, cloud services (Azure, AWS), and modern DevOps practices. I am committed to continuous learning and driving business objectives through technical excellence and problem-solving.
+            </p>
+        </section>
+
+        <section id="skills" class="custom-card fade-in-section">
+            <h2 class="section-heading font-poppins">Skills</h2>
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-4">
+                    <h3 class="h4 fw-bold mb-4 font-poppins text-primary">
+                        <svg class="me-2 text-info" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3z"/>
+                            <path d="M.5 3a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1H.5zm0 4a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1H.5zm0 4a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1H.5z"/>
+                        </svg>
+                        Cloud Technologies
+                    </h3>
+                    <div class="d-flex flex-wrap gap-3">
+                        <span class="skill-item">Azure Functions</span>
+                        <span class="skill-item">Azure Cosmos DB</span>
+                        <span class="skill-item">Azure DevOps</span>
+                        <span class="skill-item">Azure Kubernetes Service (AKS)</span>
+                        <span class="skill-item">AWS CloudWatch</span>
+                        <span class="skill-item">Docker</span>
+                        <span class="skill-item">AWS (EC2, S3)</span>
+                        <span class="skill-item">Azure Virtual Networks (VNETs)</span>
+                        <span class="skill-item">Storage Containers</span>
+                        <span class="skill-item">Load Balancers</span>
+                        <span class="skill-item">Azure Resource Manager</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <h3 class="h4 fw-bold mb-4 font-poppins text-primary">
+                        <svg class="me-2 text-info" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M12.916 3.051A1 1 0 0 1 13 2v2.059a2.003 2.003 0 0 1 .984 4.043l.968 4.842A1 1 0 0 1 14 16H6a1 1 0 0 1-.984-1.156l.968-4.842A2.003 2.003 0 0 1 7 6.059V2a1 1 0 0 1 1-1h4a1 1 0 0 1 .316.051zM10 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                        </svg>
+                        Programming Languages & Frameworks
+                    </h3>
+                    <div class="d-flex flex-wrap gap-3">
+                        <span class="skill-item">C#/.NET (Core, MVC, Web API)</span>
+                        <span class="skill-item">TypeScript</span>
+                        <span class="skill-item">Node.js</span>
+                        <span class="skill-item">React.js</span>
+                        <span class="skill-item">Angular</span>
+                        <span class="skill-item">React Native</span>
+                        <span class="skill-item">Next.js</span>
+                        <span class="skill-item">MAUI</span>
+                        <span class="skill-item">SignalR</span>
+                        <span class="skill-item">WPF</span>
+                        <span class="skill-item">ASP.NET</span>
+                        <span class="skill-item">Express</span>
+                        <span class="skill-item">Bootstrap</span>
+                        <span class="skill-item">SASS/LESS</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <h3 class="h4 fw-bold mb-4 font-poppins text-primary">
+                        <svg class="me-2 text-info" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M2 11a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-3zm5 4a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1zm-4-4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1V7a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v4z"/>
+                        </svg>
+                        Database Technologies
+                    </h3>
+                    <div class="d-flex flex-wrap gap-3">
+                        <span class="skill-item">SQL Server</span>
+                        <span class="skill-item">MongoDB</span>
+                        <span class="skill-item">PostgreSQL</span>
+                        <span class="skill-item">DynamoDB (AWS)</span>
+                        <span class="skill-item">Entity Framework (Core)</span>
+                        <span class="skill-item">ADO.NET</span>
+                        <span class="skill-item">Oracle</span>
+                        <span class="skill-item">MySQL</span>
+                        <span class="skill-item">MS-Access</span>
+                        <span class="skill-item">SSIS</span>
+                        <span class="skill-item">SSRS</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <h3 class="h4 fw-bold mb-4 font-poppins text-primary">
+                        <svg class="me-2 text-info" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M10 2a6 6 0 0 0-6 6v3.586l-.707.707A1 1 0 0 1 2 14v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3a1 1 0 0 1-.293-.707L16 11.586V8a6 6 0 0 0-6-6zm-6 6a4 4 0 1 1 8 0v3.586l-1 1H5l-1-1V8zm11 0a4 4 0 1 0-8 0v3.586l1 1h6l1-1V8z"/>
+                        </svg>
+                        DevOps & CI/CD
+                    </h3>
+                    <div class="d-flex flex-wrap gap-3">
+                        <span class="skill-item">Git</span>
+                        <span class="skill-item">GitHub</span>
+                        <span class="skill-item">Azure DevOps</span>
+                        <span class="skill-item">Jenkins</span>
+                        <span class="skill-item">Bitbucket</span>
+                        <span class="skill-item">Kubernetes</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <h3 class="h4 fw-bold mb-4 font-poppins text-primary">
+                        <svg class="me-2 text-info" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                        </svg>
+                        Security & Authentication
+                    </h3>
+                    <div class="d-flex flex-wrap gap-3">
+                        <span class="skill-item">OpenIdConnect</span>
+                        <span class="skill-item">JWT Tokens</span>
+                        <span class="skill-item">OAuth 2.0</span>
+                        <span class="skill-item">OWIN</span>
+                        <span class="skill-item">OpenFGA/OPA</span>
+                        <span class="skill-item">Zero Trust Principles</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <h3 class="h4 fw-bold mb-4 font-poppins text-primary">
+                        <svg class="me-2 text-info" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3.5a.5.5 0 0 1-.5-.5v-3.5a.5.5 0 0 1 .5-.5z"/>
+                        </svg>
+                        Other Tools & Methodologies
+                    </h3>
+                    <div class="d-flex flex-wrap gap-3">
+                        <span class="skill-item">Agile (SCRUM)</span>
+                        <span class="skill-item">Test-Driven Development (TDD)</span>
+                        <span class="skill-item">Jira</span>
+                        <span class="skill-item">RxJS</span>
+                        <span class="skill-item">NgRx</span>
+                        <span class="skill-item">Redux</span>
+                        <span class="skill-item">Material UI</span>
+                        <span class="skill-item">Selenium</span>
+                        <span class="skill-item">SOAP/WCF/REST</span>
+                        <span class="skill-item">LINQ</span>
+                        <span class="skill-item">AI/ML.NET</span>
+                        <span class="skill-item">OpenAI APIs</span>
+                    </div>
+                </div>
+            </div>
+            <h3 class="h4 fw-bold mb-4 mt-5 font-poppins text-primary">
+                <svg class="me-2 text-info" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3.5a.5.5 0 0 1-.5-.5v-3.5a.5.5 0 0 1 .5-.5z"/>
+                </svg>
+                Soft Skills
+            </h3>
+            <div class="d-flex flex-wrap gap-3">
+                <span class="skill-item" style="background: linear-gradient(45deg, #6f42c1, #dc3545);">Effective Communication</span>
+                <span class="skill-item" style="background: linear-gradient(45deg, #6f42c1, #dc3545);">Problem-Solving & Critical Thinking</span>
+                <span class="skill-item" style="background: linear-gradient(45deg, #6f42c1, #dc3545);">Teamwork & Collaboration</span>
+                <span class="skill-item" style="background: linear-gradient(45deg, #6f42c1, #dc3545);">Continuous Learning</span>
+                <span class="skill-item" style="background: linear-gradient(45deg, #6f42c1, #dc3545);">Creativity & Innovation</span>
+                <span class="skill-item" style="background: linear-gradient(45deg, #6f42c1, #dc3545);">Time Management</span>
+                <span class="skill-item" style="background: linear-gradient(45deg, #6f42c1, #dc3545);">Adaptability & Flexibility</span>
+            </div>
+        </section>
+
+        <section id="experience" class="custom-card fade-in-section">
+            <h2 class="section-heading font-poppins">Experience</h2>
+
+            <div class="experience-item">
+                <h3 class="h4 fw-bold text-primary font-poppins">Full Stack Developer</h3>
+                <p class="lead mb-2 text-secondary">EMCON LLC | Dubai, UAE</p>
+                <p class="text-muted mb-4">Aug 2023 - Present</p>
+                <ul class="list-unstyled text-secondary">
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Spearheaded modernization of ERP systems by integrating AI modules using OpenAI APIs and ML.NET.</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Migrated legacy code to .NET Core microservices, improving performance and scalability.</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Built secure and scalable web applications using React.js, Angular, and RESTful APIs.</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Developed DevOps pipelines with Azure DevOps and Docker, reducing deployment time by 40%.</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Integrated Redis and RabbitMQ to improve system responsiveness and background processing.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3 class="h4 fw-bold text-primary font-poppins">Senior Software Engineer</h3>
+                <p class="lead mb-2 text-secondary">S&P Global | Islamabad, Pakistan</p>
+                <p class="text-muted mb-4">Jul 2019 - Aug 2023</p>
+                <ul class="list-unstyled text-secondary">
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Developed high-performance .NET 8 applications with Minimal APIs, gRPC, and DAPR, optimizing RESTful services, real-time event-driven processing, and cloud-native deployments on Azure Kubernetes Service (AKS).</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Architected scalable data solutions, leveraging EF Core with PostgreSQL, SQL Server, and Redis, enhancing ETL workflows with Azure Data Factory, SSIS, and real-time analytics with Kafka and SignalR.</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Modernized front-end applications, migrating Angular 4 to 16, React.js to Next.js, and developing reusable components, .NET MAUI, and WebAssembly for high-performance UI/UX.</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Automated CI/CD pipelines with Azure DevOps and GitHub Actions, implementing containerized microservices with Kubernetes, OpenTelemetry for distributed tracing, and AI-driven observability.</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Enhanced security and authentication, integrating OAuth 2.0, OpenID Connect, and Zero Trust principles with .NET Identity, Duende IdentityServer, and Microsoft Entra ID.</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Developed and optimized cloud-based enterprise applications using Azure Functions, Cosmos DB, and Serverless Computing, reducing infrastructure costs while improving scalability and fault tolerance.</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Led Agile and DevOps transformations, mentoring engineers, implementing test-driven development (TDD), domain-driven design (DDD), and overseeing project lifecycle with Jira, Scrum, and SAFE methodologies.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3 class="h4 fw-bold text-primary font-poppins">Senior Software Engineer</h3>
+                <p class="lead mb-2 text-secondary">Wiseman Innovation | Islamabad, Pakistan</p>
+                <p class="text-muted mb-4">Jan 2017 - Aug 2019</p>
+                <ul class="list-unstyled text-secondary">
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Architected and migrated legacy systems (ASP.NET WebForms/ASMX) to modern MVC5/WebAPI2 and .NET Core, improving scalability and maintainability.</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Led cloud transformation, deploying .NET applications on Azure App Services, Kubernetes (AKS), and serverless Azure Functions, integrating Azure Service Bus and AI-powered analytics.</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Designed and implemented CI/CD pipelines with Docker, Kubernetes, Jenkins, and GitHub Actions, streamlining deployments and optimizing DevOps workflows.</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Developed data-driven applications using Entity Framework Core, SQL Server, DynamoDB, MongoDB, and real-time event processing with Kafka and RabbitMQ.</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Modernized frontend applications, migrating a native mobile app to React Native, integrating Google Watch/Apple Watch APIs, and enhancing UX with Blazor and TypeScript.</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Enhanced authentication & security, implementing OAuth 2.0, OpenIdConnect, JWT, and Zero Trust principles, ensuring compliance with enterprise security standards.</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Implemented AI-driven data processing, leveraging Azure AI Services and OpenAI APIs for intelligent automation in pharmacy management and prescription validation.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3 class="h4 fw-bold text-primary font-poppins">Senior Software Engineer (Tech Lead)</h3>
+                <p class="lead mb-2 text-secondary">CareCloud (MTBC) | Islamabad, Pakistan</p>
+                <p class="text-muted mb-4">Jan 2014 - July 2019</p>
+                <ul class="list-unstyled text-secondary">
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Led payment processing initiatives, integrating EFT, credit, and debit card systems, reducing payment errors by 20%, and architected real-time clinical data pipelines for seamless EHR interoperability using .NET 8, Azure AI Services, and microservices.</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Developed and optimized RESTful APIs using ASP.NET Core, Web API, and gRPC, ensuring high-performance data exchange and integration with FHIR/HL7/DICOM for healthcare applications.</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Developed and optimized ASP.NET MVC applications using C# and .NET Framework, implementing microservices architecture and modern API integrations.</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Built and migrated applications to Azure and AWS, leveraging Azure App Services, AWS EC2, DynamoDB, and S3, optimizing cloud performance and scalability.</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Enhanced database performance using MongoDB, SQL Server, LINQ, and ADO.NET, implementing efficient data querying and caching strategies.</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Implemented modern DevOps practices, managing CI/CD pipelines with Git, Bitbucket, and Docker, automating deployments and version control.</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Integrated SEO-friendly techniques and performance optimizations to enhance landing pages and site views.</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Designed and consumed WCF and RESTful Web Services, applying SOA principles and security best practices.</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Led Agile development with Scrum, conducting code reviews, unit testing (NUnit), and mentoring developers in TDD best practices.</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Migrated legacy systems (Classic ASP, VB.NET) to ASP.NET MVC, modernizing architecture and improving maintainability.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects" class="custom-card fade-in-section">
+            <h2 class="section-heading font-poppins">Projects</h2>
+            <p class="fs-5 mb-4 text-secondary">
+                This section is dedicated to showcasing your personal projects, open-source contributions, or significant work outside of your primary employment. Highlighting these projects can demonstrate your initiative, passion, and specific technical skills in action.
+            </p>
+            <p class="fs-5 mb-4 text-secondary">
+                Consider adding:
+            </p>
+            <ul class="list-unstyled text-secondary mb-5">
+                <li><i class="bi bi-arrow-right-circle-fill text-primary me-2"></i>Links to live demos or GitHub repositories.</li>
+                <li><i class="bi bi-arrow-right-circle-fill text-primary me-2"></i>Brief descriptions of each project, including the technologies used and your role.</li>
+                <li><i class="bi bi-arrow-right-circle-fill text-primary me-2"></i>Screenshots or short videos of the project in action.</li>
+                <li><i class="bi bi-arrow-right-circle-fill text-primary me-2"></i>The problems each project solved or the impact it had.</li>
+            </ul>
+            <div class="text-center">
+                <a href="#" class="btn btn-custom-primary">
+                    <svg class="me-2" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 0a.5.5 0 0 1 .5.5v7.5H15a.5.5 0 0 1 0 1h-6.5V15a.5.5 0 0 1-1 0v-6.5H1a.5.5 0 0 1 0-1h6.5V.5A.5.5 0 0 1 8 0z"/>
+                    </svg>
+                    Add Your Projects Here!
+                </a>
+            </div>
+        </section>
+
+        <section id="education" class="custom-card fade-in-section">
+            <h2 class="section-heading font-poppins">Education & Certifications</h2>
+            <div class="mb-5">
+                <h3 class="h4 fw-bold text-primary mb-4 font-poppins">
+                    <svg class="me-2 text-info" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M4 1.5a.5.5 0 0 0-1 0v13a.5.5 0 0 0 1 0V1.5z"/>
+                        <path d="M6.5 2a.5.5 0 0 0-1 0v12a.5.5 0 0 0 1 0V2z"/>
+                        <path d="M9 2.5a.5.5 0 0 0-1 0v11a.5.5 0 0 0 1 0V2.5z"/>
+                        <path d="M11.5 3a.5.5 0 0 0-1 0v10a.5.5 0 0 0 1 0V3z"/>
+                        <path d="M14 3.5a.5.5 0 0 0-1 0v9a.5.5 0 0 0 1 0v-9z"/>
+                    </svg>
+                    Education
+                </h3>
+                <div class="bg-light p-4 rounded-3 shadow-sm">
+                    <p class="fs-5 fw-medium text-dark mb-1">Bachelor's degree, Computer Science</p>
+                    <p class="lead mb-1 text-secondary">PMAS Arid Agriculture University (Islamabad Pakistan)</p>
+                    <p class="text-muted">Aug 2014 - Aug 2018</p>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="h4 fw-bold text-primary mb-4 font-poppins">
+                    <svg class="me-2 text-info" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                        <path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zm0-1a8 8 0 1 1 0 16A8 8 0 0 1 8 0z"/>
+                    </svg>
+                    Certifications
+                </h3>
+                <ul class="list-unstyled text-secondary">
+                    <li class="mb-2"><i class="bi bi-award-fill text-warning me-2"></i>Microsoft Certified: Azure Fundamentals</li>
+                    <li class="mb-2"><i class="bi bi-award-fill text-warning me-2"></i>AI-900: Microsoft Azure AI Fundamentals</li>
+                    <li class="mb-2"><i class="bi bi-award-fill text-warning me-2"></i>Project Management Professional (PMP)</li>
+                    <li class="mb-2"><i class="bi bi-award-fill text-warning me-2"></i>Scrum Master Academic Course</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact" class="custom-card fade-in-section">
+            <h2 class="section-heading font-poppins">Get In Touch</h2>
+            <p class="fs-5 mb-5 text-center text-md-start text-secondary">
+                I'm always open to new opportunities and collaborations. Feel free to reach out!
+            </p>
+            <div class="row g-5">
+                <div class="col-md-6">
+                    <h3 class="h4 fw-bold text-primary mb-4 font-poppins">
+                        <svg class="me-2 text-info" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                        </svg>
+                        Contact Details
+                    </h3>
+                    <p class="fs-5 mb-3 text-secondary">
+                        <strong class="text-primary">Email:</strong> <a href="mailto:fullstackdev.noman@gmail.com" class="text-decoration-none text-primary-emphasis">fullstackdev.noman@gmail.com</a>
+                    </p>
+                    <p class="fs-5 mb-3 text-secondary">
+                        <strong class="text-primary">Phone:</strong> +971 554361009
+                    </p>
+                    <p class="fs-5 text-secondary">
+                        <strong class="text-primary">Location:</strong> Dubai, UAE
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="h4 fw-bold text-primary mb-4 font-poppins">
+                        <svg class="me-2 text-info" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.756Zm7.318 1.109L16 4.697v7.104l-5.803-3.558Z"/>
+                        </svg>
+                        Send a Message
+                    </h3>
+                    <form class="row g-4">
+                        <div class="col-12">
+                            <label for="name" class="form-label visually-hidden">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" class="form-control form-control-custom">
+                        </div>
+                        <div class="col-12">
+                            <label for="email" class="form-label visually-hidden">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" class="form-control form-control-custom">
+                        </div>
+                        <div class="col-12">
+                            <label for="message" class="form-label visually-hidden">Message</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Your Message" class="form-control form-control-custom"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-custom-primary w-100">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center text-muted py-4 mt-5 border-top bg-white rounded-3 shadow-sm">
+            &copy; <span id="current-year"></span> Muhammad Noman. All rights reserved.
+        </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Simple form submission (for demonstration, no backend)
+        document.querySelector('#contact form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            console.log('Form Submitted:', { name, email, message });
+
+            const submitButton = event.target.querySelector('button[type="submit"]');
+            const originalButtonHTML = submitButton.innerHTML; // Store original HTML to restore icons
+            submitButton.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> Sending...';
+            submitButton.classList.remove('btn-custom-primary');
+            submitButton.classList.add('btn-secondary');
+            submitButton.disabled = true;
+
+            setTimeout(() => {
+                submitButton.innerHTML = '<svg class="me-2" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zm0-1a8 8 0 1 1 0 16A8 8 0 0 1 8 0z"/></svg> Message Sent!';
+                submitButton.classList.remove('btn-secondary');
+                submitButton.classList.add('btn-success');
+                setTimeout(() => {
+                    submitButton.innerHTML = originalButtonHTML; // Restore original text and icon
+                    submitButton.classList.remove('btn-success');
+                    submitButton.classList.add('btn-custom-primary');
+                    submitButton.disabled = false;
+                    event.target.reset(); // Clear the form
+                }, 3000);
+            }, 1500); // Simulate network request
+        });
+
+        // Intersection Observer for fade-in animations
+        const sections = document.querySelectorAll('.fade-in-section');
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15 // Trigger when 15% of the section is visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    // Optional: Stop observing once visible if you only want it to animate once
+                    // observer.unobserve(entry.target);
+                } else {
+                    // Optional: Remove 'is-visible' if you want it to re-animate on scroll back
+                    // entry.target.classList.remove('is-visible');
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
