@@ -11,7 +11,7 @@
   function sendVisitorLocation(lat, lon, city = "", country = "") {
     fetch("https://script.google.com/macros/s/AKfycbytyWCmigZstfSTr3bFb7uakGz2raAnBvwl43ZspQQAuEKG_2yzF7lIpaYZM36qfaYh/exec", {
       method: "POST",
-      mode: "no-cors", // prevents CORS errors
+      mode: "no-cors", // prevent CORS error in frontend
       headers: {
         "Content-Type": "application/json",
       },
@@ -31,14 +31,21 @@
           const lat = position.coords.latitude;
           const lon = position.coords.longitude;
 
-          // Optional: Reverse geocode to get city/country
-          const res = await fetch(`https://geocode.maps.co/reverse?lat=${lat}&lon=${lon}`);
-          const data = await res.json();
+          try {
+            const res = await fetch(
+              `https://geocode.maps.co/reverse?lat=${lat}&lon=${lon}&api_key=6888544a195c5367236426nfxe59e38`
+            );
+            const data = await res.json();
 
-          const city = data?.address?.city || data?.address?.town || data?.address?.state || "";
-          const country = data?.address?.country || "";
+            const city = data?.address?.city || data?.address?.town || data?.address?.state || "";
+            const country = data?.address?.country || "";
 
-          sendVisitorLocation(lat, lon, city, country);
+            sendVisitorLocation(lat, lon, city, country);
+          } catch (err) {
+            console.warn("Reverse geocoding failed:", err);
+            // Still send lat/lon even if city lookup fails
+            sendVisitorLocation(lat, lon);
+          }
         },
         (err) => {
           console.warn("Geolocation error:", err.message);
@@ -49,7 +56,7 @@
     }
   }
 
-  // Run on page load
+  // Trigger on page load
   window.onload = fetchAndSendLocation;
 </script>
 
