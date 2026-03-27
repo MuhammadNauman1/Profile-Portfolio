@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Noman - Senior Software Engineer</title>
+    <meta name="description" content="Muhammad Noman - Full Stack Developer | .NET Core Specialist | AI/ML Enthusiast | Dubai, UAE">
+    <title>Muhammad Noman | Full Stack Developer • .NET Core • AI/ML Expert</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&amp;family=Space+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet">
     <style>
         :root {
             --neon-blue: #00f0ff;
@@ -16,7 +16,6 @@
             --glass-bg: rgba(255, 255, 255, 0.03);
             --glass-border: rgba(255, 255, 255, 0.08);
         }
-
         body {
             font-family: 'Outfit', sans-serif;
             background-color: var(--dark-bg);
@@ -24,12 +23,10 @@
             line-height: 1.7;
             overflow-x: hidden;
         }
-
         h1, h2, h3, .font-tech {
             font-family: 'Space Grotesk', sans-serif;
         }
-
-        /* Particles Background */
+        /* Enhanced Particles - AI Neural Network Theme */
         #particles-js {
             position: fixed;
             width: 100%;
@@ -37,429 +34,692 @@
             top: 0;
             left: 0;
             z-index: -1;
-            background: radial-gradient(circle at center, #110b29 0%, #0a0a0f 100%);
+            background: radial-gradient(circle at center, #1a0f2e 0%, #0a0a0f 70%);
         }
-
-        /* Glassmorphism Cards */
+        /* Glassmorphism + Holographic Effect */
         .glass-card {
             background: var(--glass-bg);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             border: 1px solid var(--glass-border);
-            border-radius: 20px;
+            border-radius: 24px;
             padding: 2.5rem;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3),
+                        0 0 0 1px rgba(138, 43, 226, 0.1) inset;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             margin-bottom: 2rem;
             overflow: hidden;
             position: relative;
         }
-
         .glass-card::before {
             content: "";
             position: absolute;
-            top: 0;
-            left: -100%;
-            width: 50%;
-            height: 100%;
-            background: linear-gradient(to right, transparent, rgba(255,255,255,0.05), transparent);
+            top: -50%;
+            left: -50%;
+            width: 40%;
+            height: 300%;
+            background: linear-gradient(120deg, 
+                transparent,
+                rgba(138, 43, 226, 0.15),
+                transparent);
             transform: skewX(-20deg);
-            transition: 0.5s;
-        }
-
-        .glass-card:hover::before {
-            left: 150%;
-        }
-
-        .glass-card:hover {
-            transform: translateY(-10px);
-            border-color: rgba(138, 43, 226, 0.4);
-            box-shadow: 0 15px 40px rgba(138, 43, 226, 0.15);
-        }
-
-        /* Designer Portfolio Image Layout */
-        .portfolio-img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 12px;
-            margin-bottom: 1.5rem;
-            border: 1px solid var(--glass-border);
-            filter: grayscale(40%) contrast(120%);
-            transition: filter 0.4s ease;
-        }
-
-        .glass-card:hover .portfolio-img {
-            filter: grayscale(0%) contrast(100%);
-        }
-
-        /* Glowing Text & Headings */
-        .glow-text {
-            background: linear-gradient(to right, var(--neon-blue), var(--neon-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 30px rgba(0, 240, 255, 0.3);
-        }
-
-        .section-heading {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 2.5rem;
-            display: inline-block;
-            position: relative;
-        }
-
-        /* Skill Pills */
-        .skill-pill {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: #fff;
-            padding: 0.6rem 1.2rem;
-            border-radius: 30px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            transition: all 0.3s ease;
-        }
-
-        .skill-pill:hover {
-            background: linear-gradient(45deg, rgba(0,240,255,0.2), rgba(138,43,226,0.2));
-            border-color: var(--neon-blue);
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
-        }
-
-        /* Buttons */
-        .btn-ai {
-            background: linear-gradient(45deg, var(--neon-purple), #0051ff);
-            border: none;
-            color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 30px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            position: relative;
-            z-index: 1;
-            overflow: hidden;
-            transition: 0.3s;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-        }
-
-        .btn-ai::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, #0051ff, var(--neon-blue));
-            z-index: -1;
-            transition: 0.3s;
+            transition: 0.8s;
             opacity: 0;
         }
-
-        .btn-ai:hover::after {
+        .glass-card:hover::before {
+            left: 120%;
             opacity: 1;
         }
-
-        .btn-ai:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 240, 255, 0.4);
-            color: white;
+        .glass-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            border-color: var(--neon-purple);
+            box-shadow: 0 25px 50px -12px rgba(138, 43, 226, 0.25);
         }
-
-        .btn-outline-ai {
-            background: transparent;
-            border: 2px solid var(--neon-purple);
-            color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 30px;
-            font-weight: 600;
-            transition: 0.3s;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
+        /* Hero Glow + Floating Orb */
+        .hero-glow {
+            animation: heroPulse 4s ease-in-out infinite;
         }
-
-        .btn-outline-ai:hover {
-            background: rgba(138, 43, 226, 0.1);
-            box-shadow: 0 0 20px rgba(138, 43, 226, 0.3);
-            color: white;
-            transform: translateY(-3px);
+        @keyframes heroPulse {
+            0%, 100% { text-shadow: 0 0 20px var(--neon-blue); }
+            50% { text-shadow: 0 0 40px var(--neon-purple), 0 0 60px var(--neon-blue); }
         }
-
-        /* Floating Avatar */
+        /* Floating Avatar with AI Ring */
         .avatar-container {
             position: relative;
-            width: 280px;
-            height: 280px;
+            width: 300px;
+            height: 300px;
             margin: 0 auto;
         }
-        
         .avatar-container::before {
             content: '';
             position: absolute;
-            top: -5px; left: -5px; right: -5px; bottom: -5px;
-            background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+            inset: -12px;
+            background: conic-gradient(var(--neon-blue), var(--neon-purple), transparent);
             border-radius: 50%;
             z-index: -1;
-            animation: spin 4s linear infinite;
+            animation: aiRingSpin 8s linear infinite;
+            filter: blur(8px);
+            opacity: 0.7;
         }
-
         .avatar-img {
             width: 100%;
             height: 100%;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid var(--dark-bg);
-            animation: float 6s ease-in-out infinite;
+            border: 6px solid var(--dark-bg);
+            box-shadow: 0 0 60px rgba(0, 240, 255, 0.4);
+            animation: floatAvatar 6s ease-in-out infinite;
         }
-
-        @keyframes spin { 100% { transform: rotate(360deg); } }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
+        @keyframes aiRingSpin { 100% { transform: rotate(360deg); } }
+        @keyframes floatAvatar {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-25px) rotate(8deg); }
         }
-
-        /* Scroll Animation Setup */
+        /* Glowing Section Headings */
+        .section-heading {
+            font-size: 2.75rem;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60%;
+            height: 3px;
+            background: linear-gradient(to right, var(--neon-blue), var(--neon-purple));
+            border-radius: 50px;
+        }
+        /* Skill Pills - Enhanced */
+        .skill-pill {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(138,43,226,0.3);
+            color: #fff;
+            padding: 0.75rem 1.4rem;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .skill-pill:hover {
+            background: linear-gradient(90deg, rgba(0,240,255,0.15), rgba(138,43,226,0.15));
+            border-color: var(--neon-blue);
+            transform: translateY(-4px) scale(1.08);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+        }
+        /* Buttons */
+        .btn-ai {
+            background: linear-gradient(45deg, var(--neon-purple), #00d4ff);
+            border: none;
+            color: white;
+            padding: 1.1rem 2.8rem;
+            border-radius: 50px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        .btn-ai::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 40%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: 0.6s;
+        }
+        .btn-ai:hover::before {
+            left: 200%;
+        }
+        .btn-ai:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(138, 43, 226, 0.4);
+        }
+        .btn-outline-ai {
+            border: 2px solid var(--neon-blue);
+            color: white;
+            padding: 1.1rem 2.8rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.4s ease;
+        }
+        .btn-outline-ai:hover {
+            background: rgba(0, 240, 255, 0.1);
+            box-shadow: 0 0 25px rgba(0, 240, 255, 0.5);
+            color: white;
+        }
+        /* Timeline */
+        .timeline {
+            position: relative;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--neon-blue), var(--neon-purple));
+            opacity: 0.3;
+        }
+        .timeline-item {
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 38px;
+            top: 18px;
+            width: 24px;
+            height: 24px;
+            background: var(--dark-bg);
+            border: 4px solid var(--neon-blue);
+            border-radius: 50%;
+            z-index: 1;
+            box-shadow: 0 0 0 8px rgba(138,43,226,0.2);
+        }
+        /* Project Card Hover */
+        .project-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 30px 60px -15px rgba(138, 43, 226, 0.3);
+        }
         .fade-in-up {
             opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transform: translateY(60px);
+            transition: all 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
         .fade-in-up.is-visible {
             opacity: 1;
             transform: translateY(0);
         }
-        
-        ul li { margin-bottom: 0.8rem; color: #adb5bd; }
-        ul li i { color: var(--neon-blue); margin-right: 10px; }
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            color: var(--neon-blue) !important;
+            text-shadow: 0 0 15px var(--neon-blue);
+        }
     </style>
 </head>
 <body>
+    <!-- Particles Background - AI Neural Network -->
     <div id="particles-js"></div>
 
-    <main class="container my-5 py-4 position-relative z-1">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg sticky-top py-3" style="background: rgba(10,10,15,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(138,43,226,0.2);">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 text-white fw-bold fs-4" href="#">
+                <span style="color: var(--neon-blue);">N</span>OMAN
+                <span class="badge bg-gradient px-2 py-1" style="background: linear-gradient(45deg, #8a2be2, #00f0ff); font-size: 0.7rem;">AI</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-4">
+                    <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#ai-projects">AI Projects</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#personal-projects">Personal</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#education">Education</a></li>
+                    <li class="nav-item">
+                        <a href="https://www.linkedin.com/in/muhammad-noman-a830a0108" target="_blank" class="btn btn-sm btn-outline-light d-flex align-items-center gap-2">
+                            <i class="bi bi-linkedin"></i> LinkedIn
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-        <section class="glass-card mb-5 text-center text-lg-start fade-in-up is-visible">
-            <div class="row align-items-center">
-                <div class="col-lg-8 order-2 order-lg-1 mt-5 mt-lg-0">
-                    <div class="d-inline-block px-3 py-1 rounded-pill mb-3" style="background: rgba(0,240,255,0.1); border: 1px solid var(--neon-blue); color: var(--neon-blue);">
-                        <i class="bi bi-geo-alt-fill me-2"></i> Dubai, UAE
+    <main class="container py-5 position-relative z-1">
+
+        <!-- HERO SECTION -->
+        <section id="about" class="glass-card mb-5 text-center text-lg-start fade-in-up is-visible">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7 order-2 order-lg-1">
+                    <div class="d-inline-flex align-items-center gap-2 px-4 py-2 rounded-5 mb-4" style="background: rgba(0,240,255,0.1); border: 1px solid var(--neon-blue); color: var(--neon-blue);">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        Dubai, UAE
                     </div>
-                    <h1 class="display-3 fw-bold font-tech mb-2">
-                        Muhammad Noman
-                    </h1>
-                    <h2 class="h3 glow-text font-tech mb-4">Senior Software Engineer & AI Enthusiast</h2>
-                    <p class="fs-5 text-secondary mb-5">
-                        Over 9 years engineering scalable solutions across Web3, Fintech, and Healthcare. Specializing in AI integration, full-stack .NET architectures, and modern cloud ecosystems.
+                    
+                    <h1 class="display-2 fw-bold font-tech mb-2 hero-glow">Muhammad Noman</h1>
+                    <h2 class="display-6 text-gradient mb-4" style="background: linear-gradient(to right, var(--neon-blue), var(--neon-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                        Full Stack Developer • .NET Core Specialist • AI/ML Enthusiast
+                    </h2>
+                    
+                    <p class="fs-4 text-secondary mb-5" style="max-width: 580px;">
+                        Results-driven Full Stack Developer with deep expertise in <strong>.NET Core</strong>, 
+                        <strong>AI/ML</strong> integration, and modern cloud architectures. Passionate about modernizing 
+                        legacy systems, boosting ERP performance with AI, and automating complex business processes.
                     </p>
+
                     <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
-                        <a href="tel:+971554361009" class="btn-ai">
-                            <i class="bi bi-telephone-fill me-2 fs-5"></i> Let's Connect (+971 554361009)
+                        <a href="tel:+971554361009" class="btn-ai fs-5">
+                            <i class="bi bi-telephone-fill me-2"></i> +971 554 361 009
                         </a>
-                        <a href="mailto:fullstackdev.noman@gmail.com" class="btn-outline-ai">
-                            <i class="bi bi-envelope me-2 fs-5"></i> Email Me
+                        <a href="mailto:fullstackdev.noman@gmail.com" class="btn-outline-ai fs-5">
+                            <i class="bi bi-envelope-fill me-2"></i> fullstackdev.noman@gmail.com
+                        </a>
+                        <a href="#" onclick="window.open('Muhammad Noman Resume.pdf', '_blank'); return false;" class="btn btn-outline-light d-flex align-items-center gap-2 fs-5">
+                            <i class="bi bi-download"></i> Download Resume
                         </a>
                     </div>
+
+                    <div class="mt-5 d-flex align-items-center gap-5 text-secondary">
+                        <div><i class="bi bi-arrow-right-circle-fill text-info me-2"></i> 7+ years building scalable enterprise systems</div>
+                        <div><i class="bi bi-robot me-2"></i> AI-powered automation in production</div>
+                        <div><i class="bi bi-cloud-fill text-info me-2"></i> Azure • AWS • Kubernetes</div>
+                    </div>
                 </div>
-                <div class="col-lg-4 order-1 order-lg-2">
+
+                <!-- Floating AI Avatar -->
+                <div class="col-lg-5 order-1 order-lg-2">
                     <div class="avatar-container">
-                        <img src="https://media.licdn.com/dms/image/v2/D4D03AQE9DnioV6cdCw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1712763754197?e=1776297600&v=beta&t=EjsCbrt2WvaKuav3xeivuFoB3OUvqTdwL5vrIaVjc4I&w=400&auto=format&fit=crop" alt="Muhammad Noman" class="avatar-img shadow-lg">
+                        <img src="https://media.licdn.com/dms/image/v2/D4D03AQE9DnioV6cdCw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1712763754197?e=1776297600&v=beta&t=EjsCbrt2WvaKuav3xeivuFoB3OUvqTdwL5vrIaVjc4I&w=400&auto=format&fit=crop" 
+                             alt="Muhammad Noman - Full Stack & AI Engineer" 
+                             class="avatar-img shadow-lg">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="mb-5 fade-in-up">
-            <h2 class="section-heading font-tech glow-text">Technical Arsenal</h2>
+        <!-- TECHNICAL SKILLS -->
+        <section id="skills" class="mb-7 fade-in-up">
+            <h2 class="section-heading font-tech glow-text mb-5">Technical Arsenal</h2>
             <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="glass-card h-100 mb-0 p-4">
-                        <h3 class="h5 font-tech mb-4"><i class="bi bi-cloud-network text-info me-2"></i> Cloud & DevOps</h3>
+                <!-- Backend -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card h-100">
+                        <h4 class="h5 font-tech mb-4"><i class="bi bi-cpu-fill text-info me-2"></i>Backend &amp; .NET Core</h4>
                         <div class="d-flex flex-wrap gap-2">
-                            <span class="skill-pill">Azure Kubernetes (AKS)</span>
-                            <span class="skill-pill">Docker</span>
-                            <span class="skill-pill">AWS Services</span>
-                            <span class="skill-pill">Azure DevOps</span>
-                            <span class="skill-pill">Azure Functions</span>
-                            <span class="skill-pill">OpenTelemetry</span>
+                            <span class="skill-pill"><i class="bi bi-dot"></i>C# • .NET Core • ASP.NET</span>
+                            <span class="skill-pill"><i class="bi bi-dot"></i>Microservices</span>
+                            <span class="skill-pill"><i class="bi bi-dot"></i>Node.js</span>
+                            <span class="skill-pill"><i class="bi bi-dot"></i>PHP • VB6 Migration</span>
+                            <span class="skill-pill"><i class="bi bi-dot"></i>AI/ML in .NET Core</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="glass-card h-100 mb-0 p-4">
-                        <h3 class="h5 font-tech mb-4"><i class="bi bi-braces text-info me-2"></i> Core Engineering</h3>
+                <!-- Frontend -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card h-100">
+                        <h4 class="h5 font-tech mb-4"><i class="bi bi-window-sidebar text-info me-2"></i>Frontend Mastery</h4>
                         <div class="d-flex flex-wrap gap-2">
-                            <span class="skill-pill">C# / .NET /.NET CORE</span>
-                            <span class="skill-pill">React & Next.js</span>
-                            <span class="skill-pill">JavaScript</span>
-                            <span class="skill-pill">TypeScript</span>
-                            <span class="skill-pill">Node.js</span>
-                            <span class="skill-pill">Angular</span>
-                            <span class="skill-pill">Vue</span>
-                            <span class="skill-pill">gRPC & DAPR</span>
-                            <span class="skill-pill">XML Web services (WCF, WPF, REST, SOAP)</span>
+                            <span class="skill-pill"><i class="bi bi-dot"></i>React.js • Next.js</span>
+                            <span class="skill-pill"><i class="bi bi-dot"></i>Angular • Vue.js</span>
+                            <span class="skill-pill"><i class="bi bi-dot"></i>TypeScript • JavaScript</span>
+                            <span class="skill-pill"><i class="bi bi-dot"></i>jQuery</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="glass-card h-100 mb-0 p-4">
-                        <h3 class="h5 font-tech mb-4"><i class="bi bi-cpu text-info me-2"></i> AI & Data</h3>
+                <!-- AI / ML -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card h-100">
+                        <h4 class="h5 font-tech mb-4"><i class="bi bi-robot text-purple me-2"></i>AI &amp; ML Tools</h4>
                         <div class="d-flex flex-wrap gap-2">
-                            <span class="skill-pill">OpenAI APIs</span>
-                            <span class="skill-pill">ML.NET</span>
-                            <span class="skill-pill">PostgreSQL</span>
-                            <span class="skill-pill">Cosmos DB</span>
-                            <span class="skill-pill">Kafka & RabbitMQ</span>
+                            <span class="skill-pill"><i class="bi bi-dot"></i>ML.NET</span>
+                            <span class="skill-pill"><i class="bi bi-dot"></i>OpenAI API • ChatGPT Library</span>
+                            <span class="skill-pill"><i class="bi bi-dot"></i>TensorFlow</span>
+                            <span class="skill-pill"><i class="bi bi-dot"></i>Predictive Analytics • NLP</span>
+                            <span class="skill-pill"><i class="bi bi-dot"></i>Python (Basic)</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cloud &amp; DevOps -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card h-100">
+                        <h4 class="h5 font-tech mb-4"><i class="bi bi-cloud-arrow-up-fill text-info me-2"></i>Cloud &amp; DevOps</h4>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="skill-pill"><i class="bi bi-dot"></i>AWS • Azure</span>
+                            <span class="skill-pill"><i class="bi bi-dot"></i>Docker • Kubernetes</span>
+                            <span class="skill-pill"><i class="bi bi-dot"></i>CI/CD • Azure DevOps</span>
+                            <span class="skill-pill"><i class="bi bi-dot"></i>RabbitMQ • Kafka • Redis</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Security -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card h-100">
+                        <h4 class="h5 font-tech mb-4"><i class="bi bi-shield-lock-fill text-info me-2"></i>Security &amp; Auth</h4>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="skill-pill"><i class="bi bi-dot"></i>OKTA • Microsoft SSO</span>
+                            <span class="skill-pill"><i class="bi bi-dot"></i>JWT • OAuth • OpenID</span>
+                            <span class="skill-pill"><i class="bi bi-dot"></i>Identity Provider</span>
+                            <span class="skill-pill"><i class="bi bi-dot"></i>HL7 FHIR • HIPAA</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Databases -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card h-100">
+                        <h4 class="h5 font-tech mb-4"><i class="bi bi-database-fill text-info me-2"></i>Databases &amp; Integration</h4>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="skill-pill"><i class="bi bi-dot"></i>SQL • PostgreSQL • MySQL</span>
+                            <span class="skill-pill"><i class="bi bi-dot"></i>MongoDB • DynamoDB</span>
+                            <span class="skill-pill"><i class="bi bi-dot"></i>Elasticsearch • Kibana</span>
+                            <span class="skill-pill"><i class="bi bi-dot"></i>WCF • REST APIs</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="mb-5">
-            <h2 class="section-heading font-tech glow-text fade-in-up">Career Architecture</h2>
+        <!-- EXPERIENCE - TIMELINE -->
+        <section id="experience" class="mb-7 fade-in-up">
+            <h2 class="section-heading font-tech glow-text mb-5">Career Architecture</h2>
+            <div class="timeline">
 
-            <div class="row mb-4 fade-in-up">
-                <div class="col-12">
-                    <div class="glass-card">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800&auto=format&fit=crop" alt="AI ERP Modernization" class="portfolio-img">
-                                <h3 class="h4 font-tech text-white mb-1">EMCON LLC</h3>
-                                <p class="text-info mb-0">Full Stack Developer</p>
-                                <p class="text-secondary small">Aug 2023 - Present | Dubai, UAE</p>
+                <!-- Emcon LLC -->
+                <div class="timeline-item row align-items-center">
+                    <div class="col-md-2 text-md-end pe-md-4">
+                        <div class="text-info fw-bold">2023 — Present</div>
+                        <h5 class="font-tech">Senior Full Stack Developer</h5>
+                        <p class="text-purple">Emcon LLC • Dubai, UAE</p>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="glass-card">
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&amp;w=800&amp;auto=format&amp;fit=crop" alt="AI-Powered ERP Modernization" class="img-fluid rounded-3" style="height: 180px; object-fit: cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <ul class="list-unstyled">
+                                        <li class="mb-3"><i class="bi bi-check-circle-fill text-neon-blue me-3"></i>Revamped legacy ERP from VB6 → Node.js + React.js</li>
+                                        <li class="mb-3"><i class="bi bi-check-circle-fill text-neon-blue me-3"></i>Integrated AI/ML models for report generation, predictive analytics &amp; testing — <strong>40% efficiency gain</strong></li>
+                                        <li class="mb-3"><i class="bi bi-check-circle-fill text-neon-blue me-3"></i>Implemented OKTA + Microsoft SSO across all systems</li>
+                                        <li><i class="bi bi-check-circle-fill text-neon-blue me-3"></i>Tech: .NET • Node • React • Angular • AI/ML • RabbitMQ • Kafka • Azure DevOps • SQL</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="col-md-8 ps-md-4">
-                                <h4 class="h5 font-tech mb-3">AI-Powered ERP Modernization</h4>
-                                <ul class="list-unstyled">
-                                    <li><i class="bi bi-bullseye"></i> Spearheaded the modernization of ERP systems by integrating AI modules using OpenAI APIs and ML.NET.</li>
-                                    <li><i class="bi bi-bullseye"></i> Migrated monolithic legacy code to .NET Core microservices, vastly improving processing speeds.</li>
-                                    <li><i class="bi bi-bullseye"></i> Built secure web applications utilizing React.js, Angular, and optimized RESTful APIs.</li>
-                                    <li><i class="bi bi-bullseye"></i> Automated CI/CD pipelines with Docker and Azure DevOps, slashing deployment times by 40%.</li>
-                                </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- S&amp;P Global -->
+                <div class="timeline-item row align-items-center">
+                    <div class="col-md-2 text-md-end pe-md-4">
+                        <div class="text-info fw-bold">2021 — 2023</div>
+                        <h5 class="font-tech">Full Stack Developer</h5>
+                        <p class="text-purple">S&amp;P Global</p>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="glass-card">
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&amp;w=800&amp;auto=format&amp;fit=crop" alt="AI Fraud Detection" class="img-fluid rounded-3" style="height: 180px; object-fit: cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <ul class="list-unstyled">
+                                        <li class="mb-3"><i class="bi bi-check-circle-fill text-neon-blue me-3"></i>Led AI-driven authentication &amp; fraud detection module — <strong>30% reduction</strong> in unauthorized access</li>
+                                        <li class="mb-3"><i class="bi bi-check-circle-fill text-neon-blue me-3"></i>Designed JWT + Identity Provider solutions</li>
+                                        <li class="mb-3"><i class="bi bi-check-circle-fill text-neon-blue me-3"></i>Built Docker + Kubernetes architecture for scalable deployments</li>
+                                        <li><i class="bi bi-check-circle-fill text-neon-blue me-3"></i>Tech: .NET • React • OpenAI • OKTA • RabbitMQ • Kafka • Docker • AWS • SQL</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wiseman -->
+                <div class="timeline-item row align-items-center">
+                    <div class="col-md-2 text-md-end pe-md-4">
+                        <div class="text-info fw-bold">2019 — 2021</div>
+                        <h5 class="font-tech">Software Engineer</h5>
+                        <p class="text-purple">Wiseman</p>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="glass-card">
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?q=80&amp;w=800&amp;auto=format&amp;fit=crop" alt="Healthcare AI Chatbot" class="img-fluid rounded-3" style="height: 180px; object-fit: cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <ul class="list-unstyled">
+                                        <li class="mb-3"><i class="bi bi-check-circle-fill text-neon-blue me-3"></i>Developed healthcare chatbot using AI/ML for automated patient interaction</li>
+                                        <li class="mb-3"><i class="bi bi-check-circle-fill text-neon-blue me-3"></i>Built doctor survey application &amp; lab assistance platform for remote diagnostics</li>
+                                        <li><i class="bi bi-check-circle-fill text-neon-blue me-3"></i>Tech: .NET • Angular • React • OpenAI • OKTA • RabbitMQ • Docker • AWS • SQL</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Synergy-IT + MTBC (Combined short roles) -->
+                <div class="timeline-item row align-items-center">
+                    <div class="col-md-2 text-md-end pe-md-4">
+                        <div class="text-info fw-bold">2019</div>
+                        <h5 class="font-tech">Full Stack &amp; AI/ML Developer</h5>
+                        <p class="text-purple">Synergy-IT • MTBC (TalkEHR)</p>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="glass-card">
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&amp;w=800&amp;auto=format&amp;fit=crop" alt="Telehealth &amp; FHIR" class="img-fluid rounded-3" style="height: 180px; object-fit: cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-neon-blue me-3"></i>HL7 FHIR &amp; HIPAA compliance + NLP for EHR automation</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-neon-blue me-3"></i>Built secure telehealth chat with Twilio + SignalR</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-neon-blue me-3"></i>RabbitMQ messaging + Elasticsearch/Kibana real-time monitoring</li>
+                                        <li><i class="bi bi-check-circle-fill text-neon-blue me-3"></i>Tech: .NET • React • Angular • OpenAI • OKTA • Kafka • Docker • AWS • SQL</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="row mb-4 fade-in-up">
-                <div class="col-12">
-                    <div class="glass-card">
-                        <div class="row">
-                            <div class="col-md-4 order-md-2">
-                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" alt="Data Analytics" class="portfolio-img">
-                                <h3 class="h4 font-tech text-white mb-1">S&P Global</h3>
-                                <p class="text-info mb-0">Senior Software Engineer</p>
-                                <p class="text-secondary small">Jul 2021 - Aug 2023 | Islamabad, PK</p>
-                            </div>
-                            <div class="col-md-8 order-md-1 pe-md-4">
-                                <h4 class="h5 font-tech mb-3">High-Performance Cloud Data Solutions</h4>
-                                <ul class="list-unstyled">
-                                    <li><i class="bi bi-bullseye"></i> Engineered high-performance .NET 8 applications utilizing Minimal APIs, gRPC, and DAPR orchestration.</li>
-                                    <li><i class="bi bi-bullseye"></i> Architected real-time data solutions with EF Core, PostgreSQL, and event-driven processing via Kafka and SignalR.</li>
-                                    <li><i class="bi bi-bullseye"></i> Modernized major front-end assets, migrating Angular to v16 and React.js to Next.js for superior UI/UX.</li>
-                                    <li><i class="bi bi-bullseye"></i> Hardened system security using OAuth 2.0, OpenID Connect, and Zero Trust principles with Microsoft Entra ID.</li>
-                                </ul>
-                            </div>
-                        </div>
+        <!-- AI/ML IN .NET CORE PROJECTS -->
+        <section id="ai-projects" class="mb-7 fade-in-up">
+            <h2 class="section-heading font-tech glow-text mb-5">AI/ML in .NET Core — Production Impact</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card project-card h-100">
+                        <div class="text-center mb-3"><i class="bi bi-graph-up-arrow fs-1 text-purple"></i></div>
+                        <h5 class="font-tech">AI-Powered ERP Automation</h5>
+                        <p class="text-secondary">Optimized finance, reporting &amp; testing workflows using ML.NET — 40% efficiency boost.</p>
+                        <span class="badge bg-purple text-white mt-3">ML.NET • OpenAI</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card project-card h-100">
+                        <div class="text-center mb-3"><i class="bi bi-chat-dots-fill fs-1 text-purple"></i></div>
+                        <h5 class="font-tech">AI-Driven Chatbot</h5>
+                        <p class="text-secondary">Built with OpenAI APIs for automated client support &amp; internal workflows.</p>
+                        <span class="badge bg-purple text-white mt-3">OpenAI • .NET Core • SignalR</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card project-card h-100">
+                        <div class="text-center mb-3"><i class="bi bi-bar-chart-line-fill fs-1 text-purple"></i></div>
+                        <h5 class="font-tech">Predictive Analytics Dashboard</h5>
+                        <p class="text-secondary">Financial forecasting tool powered by ML.NET.</p>
+                        <span class="badge bg-purple text-white mt-3">ML.NET • React</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card project-card h-100">
+                        <div class="text-center mb-3"><i class="bi bi-file-earmark-text-fill fs-1 text-purple"></i></div>
+                        <h5 class="font-tech">AI-Powered OCR Document Processing</h5>
+                        <p class="text-secondary">Automated classification &amp; processing of healthcare records.</p>
+                        <span class="badge bg-purple text-white mt-3">TensorFlow • .NET</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card project-card h-100">
+                        <div class="text-center mb-3"><i class="bi bi-code-slash fs-1 text-purple"></i></div>
+                        <h5 class="font-tech">AI-Based Code Testing Automation</h5>
+                        <p class="text-secondary">Automated redundant test cases &amp; enhanced development workflow.</p>
+                        <span class="badge bg-purple text-white mt-3">ML.NET • NUnit</span>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="row mb-4 fade-in-up">
-                <div class="col-12">
-                    <div class="glass-card">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=800&auto=format&fit=crop" alt="Healthcare Tech" class="portfolio-img">
-                                <h3 class="h4 font-tech text-white mb-1">Wiseman Innovation & CareCloud</h3>
-                                <p class="text-info mb-0">Senior Software Engineer (Tech Lead)</p>
-                                <p class="text-secondary small">Jan 2019 - Aug 2021 | Islamabad, PK</p>
-                            </div>
-                            <div class="col-md-8 ps-md-4">
-                                <h4 class="h5 font-tech mb-3">Healthcare & Innovation Leadership</h4>
-                                <ul class="list-unstyled">
-                                    <li><i class="bi bi-bullseye"></i> Led payment processing integrations (EFT, credit systems), reducing transaction errors by 20%.</li>
-                                    <li><i class="bi bi-bullseye"></i> Engineered real-time clinical data pipelines ensuring EHR interoperability using Azure AI and microservices.</li>
-                                    <li><i class="bi bi-bullseye"></i> Deployed robust .NET applications across AWS (EC2, DynamoDB) and Azure (AKS, Functions).</li>
-                                    <li><i class="bi bi-bullseye"></i> Piloted AI-driven data processing for intelligent automation in prescription validation and pharmacy management.</li>
-                                </ul>
-                            </div>
-                        </div>
+        <!-- PERSONAL PROJECTS -->
+        <section id="personal-projects" class="mb-7 fade-in-up">
+            <h2 class="section-heading font-tech glow-text mb-5">Personal AI &amp; Full-Stack Creations</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card project-card h-100">
+                        <h5 class="font-tech">Import/Export Management System</h5>
+                        <p class="text-secondary">AI-driven analytics for customs clearance &amp; logistics optimization.</p>
+                        <span class="badge bg-info text-white">.NET • React • AI Analytics</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card project-card h-100">
+                        <h5 class="font-tech">Finance Management Portal</h5>
+                        <p class="text-secondary">Secure .NET MVC financial tracking &amp; reporting system.</p>
+                        <span class="badge bg-info text-white">.NET MVC • JWT • SQL</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card project-card h-100">
+                        <h5 class="font-tech">Telehealth Chat System</h5>
+                        <p class="text-secondary">Real-time secure doctor-patient platform (SignalR + Twilio + WebRTC).</p>
+                        <span class="badge bg-info text-white">.NET • React • WebRTC</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card project-card h-100">
+                        <h5 class="font-tech">Hotel Management System</h5>
+                        <p class="text-secondary">Complete booking &amp; reservation solution (React.js + .NET MVC).</p>
+                        <span class="badge bg-info text-white">React • .NET MVC</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card project-card h-100">
+                        <h5 class="font-tech">AI Trading Market Agent</h5>
+                        <p class="text-secondary">Real-time market fluctuation alerts &amp; updates using AI.</p>
+                        <span class="badge bg-info text-white">OpenAI • .NET Core</span>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="row mb-4 fade-in-up">
-                <div class="col-12">
-                    <div class="glass-card">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=800&auto=format&fit=crop" alt="Healthcare Tech" class="portfolio-img">
-                                <h3 class="h4 font-tech text-white mb-1">CareCloud (MTBC)</h3>
-                                <p class="text-info mb-0">Senior Software Engineer (Tech Lead)</p>
-                                <p class="text-secondary small">Jan 2014 - Aug 2019 | Islamabad, PK</p>
-                            </div>
-                            <div class="col-md-8 ps-md-4">
-                                <h4 class="h5 font-tech mb-3">Healthcare & Innovation Leadership</h4>
-                                <ul class="list-unstyled">
-                                    <li><i class="bi bi-bullseye"></i> Created Automated Billing System for Doctor and Patient with Insurance companies</li>
-                                    <li><i class="bi bi-bullseye"></i> Engineered real-time KIOSK system for patient to checkin and replies with some automated questions for doctor to understand patient clinical history</li>
-                                    <li><i class="bi bi-bullseye"></i> ICD's (Medication Codes) upgradation</li>
-                                    <li><i class="bi bi-bullseye"></i> Internal Company Admin, HR and Employee Checking system Automated</li>
-                                </ul>
-                            </div>
+        <!-- EDUCATION &amp; CERTIFICATIONS -->
+        <section id="education" class="glass-card mb-5 fade-in-up">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h4 class="font-tech mb-4"><i class="bi bi-mortarboard-fill text-info me-2"></i>Education</h4>
+                    <div class="d-flex align-items-start gap-4">
+                        <div class="flex-shrink-0 text-info fs-3">🎓</div>
+                        <div>
+                            <h5 class="font-tech">BS Computer Science</h5>
+                            <p class="mb-0">PMAS Arid Agriculture University</p>
+                            <p class="text-secondary">CGPA: 3.87 / 4.0</p>
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-6">
+                    <h4 class="font-tech mb-4"><i class="bi bi-award-fill text-purple me-2"></i>Certifications</h4>
+                    <ul class="list-unstyled">
+                        <li class="d-flex align-items-center gap-3 mb-3"><i class="bi bi-microsoft text-info"></i> Microsoft Certified: Azure Fundamentals</li>
+                        <li class="d-flex align-items-center gap-3 mb-3"><i class="bi bi-robot text-purple"></i> AI-900: Microsoft Azure AI Fundamentals</li>
+                        <li class="d-flex align-items-center gap-3"><i class="bi bi-aws text-orange"></i> AWS Certified Developer — Associate <span class="badge bg-warning text-dark ms-auto">In Progress</span></li>
+                    </ul>
+                </div>
             </div>
-            
         </section>
 
     </main>
 
+    <!-- FOOTER / FINAL CTA -->
+    <footer class="py-5 border-top border-light border-opacity-10 text-center">
+        <div class="container">
+            <p class="mb-2 text-secondary">Ready to build the next intelligent system together?</p>
+            <a href="mailto:fullstackdev.noman@gmail.com" class="btn-ai btn-lg px-5">Let’s Build Something Extraordinary</a>
+            <p class="mt-5 text-secondary small">© 2026 Muhammad Noman • Dubai, UAE • Made with passion for AI &amp; clean code</p>
+        </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Initialize AI Network Particles
+        // AI Neural Network Particles
         particlesJS("particles-js", {
             "particles": {
-                "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
-                "color": { "value": ["#00f0ff", "#8a2be2"] },
-                "shape": { "type": "circle" },
-                "opacity": { "value": 0.5, "random": true },
-                "size": { "value": 3, "random": true },
-                "line_linked": { "enable": true, "distance": 150, "color": "#8a2be2", "opacity": 0.2, "width": 1 },
-                "move": { "enable": true, "speed": 1.5, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+                "number": { "value": 80, "density": { "enable": true, "value_area": 900 } },
+                "color": { "value": ["#00f0ff", "#8a2be2", "#00d4ff"] },
+                "shape": { "type": ["circle", "triangle"] },
+                "opacity": { "value": 0.6, "random": true },
+                "size": { "value": 3.5, "random": true },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 140,
+                    "color": "#8a2be2",
+                    "opacity": 0.25,
+                    "width": 1.5
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out"
+                }
             },
             "interactivity": {
                 "detect_on": "canvas",
-                "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
-                "modes": { "grab": { "distance": 200, "line_linked": { "opacity": 0.6 } } }
+                "events": {
+                    "onhover": { "enable": true, "mode": "grab" },
+                    "onclick": { "enable": true, "mode": "push" },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": { "distance": 220, "line_linked": { "opacity": 0.7 } },
+                    "push": { "particles_nb": 4 }
+                }
             },
             "retina_detect": true
         });
 
-        // Scroll Animation Observer
+        // Scroll animations
         document.addEventListener("DOMContentLoaded", () => {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('is-visible');
-                        observer.unobserve(entry.target);
                     }
                 });
-            }, { threshold: 0.1 });
+            }, { threshold: 0.15 });
 
             document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
         });
+
+        // Smooth scroll for nav
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        console.log('%c✅ Muhammad Noman Portfolio v2.0 — AI-enhanced &amp; production-ready', 'color:#00f0ff; font-family:Space Grotesk; font-size:13px;');
     </script>
 </body>
 </html>
-
-http://googleusercontent.com/interactive_content_block/
